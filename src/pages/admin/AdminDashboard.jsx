@@ -215,8 +215,8 @@ const AdminDashboard = () => {
           </div>
 
           <div className="flex items-center gap-3">
-            <span className="bg-emerald-100 text-emerald-800 text-xs px-3 py-1 rounded-full font-bold">
-              Role: Admin
+            <span className="bg-emerald-100 text-emerald-800 text-xs px-3 py-1 rounded-full font-bold capitalize">
+              Role: {user?.role || 'Admin'}
             </span>
             <button
               onClick={logout}
