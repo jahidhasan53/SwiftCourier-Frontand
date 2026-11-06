@@ -51,8 +51,8 @@ const AgentEarnings = () => {
     return deliveredParcels.filter((p) => {
       const q = search.toLowerCase();
       return (
-        p.tracking_number.toLowerCase().includes(q) ||
-        p.receiver_name.toLowerCase().includes(q)
+        (p.tracking_number || "").toLowerCase().includes(q) ||
+        (p.receiver_name || "").toLowerCase().includes(q)
       );
     });
   }, [deliveredParcels, search]);
